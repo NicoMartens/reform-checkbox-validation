@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def create
     @form = UserForm.new(User.new)
     if @form.validate(params[:user]) && @form.save
-      redirect_to :new
+      render plain: 'User could be validated and saved'
     else
       render :new
     end
