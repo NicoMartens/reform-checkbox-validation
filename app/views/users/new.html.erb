@@ -1,0 +1,8 @@
+<h1>User#new</h1>
+<%= form_for @form do |f| %>
+  Name: <%= f.text_field :name %>
+  <br>
+  Must be checked, shall be validatet: <%= f.check_box :checkbox %>
+  <br>
+  <%= f.submit %>
+<% end %>
